@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            Assignment-3 Dya2
+        </title>
+    </head>
+    <body>
+        <script>
+            var d = new Date();
+            var y = d.getFullYear();
+            var m = d.getMonth() + 1;
+            var n = d.getDate();
+            if(m < 10)
+            {
+                m = '0' + m 
+            }
+            if(n < 10)
+            {
+                n = '0' + n
+            }
+            document.write('mm-dd-yyyy : '+m+'-'+n+'-'+y)
+        </script>
+    </body>
+</html>
