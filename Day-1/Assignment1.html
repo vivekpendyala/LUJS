@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.clear() // It is going to clear the whole console
+        console.group('a') // It starts the section named 'a'
+        console.time('start') // it is going to start the time count
+        console.log('it is used for debugging purpose....') // The text written inside it will be displed in the console
+        console.error('I am a error') // It is going to create a eeror msg in the console
+        console.warn('I am a warning') // It is going to create a warning msg.
+        console.timeEnd('start') // it is going end the time count and display it in the console.
+        console.groupEnd('a') // It is going to end a section named 'a'
+        
+        console.groupCollapsed() // Used to create a collapsed group.
+
+        var b = 45
+        var a = 56
+        var c = 75
+        console.table({a,b,c}) // It is going to produce an table with variable name and value.
+
+        console.info(25) // it is used to print the information in console.
+        console.groupEnd() // It is used to end the collapsed group.
+        console.log('New ')
+        
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

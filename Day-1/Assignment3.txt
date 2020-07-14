@@ -1,0 +1,21 @@
+There are Eight(including null) data types in javascript.
+These data types are divide into two types 1) Primitive data type 2) Complex data type. 
+They are :-
+-->Number
+    -- Any number whole number , integer or rational number...
+-->String
+    -- Any thing which is specified inside doublequotes or singlequotes.
+-->Boolean
+    -- True or False
+-->Undefined
+    -- undefined is undefined its value is not zero.
+-->Array
+    -- Any value which is inside square brackets([])
+-->Object
+   -- Any key,value which is specified in curly brackets({})
+-->Function
+   -- It is a object we can assign this to a varialbe and we can return the value.
+-->null
+   -- null is null which is not equal to zero.
+
+

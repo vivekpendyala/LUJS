@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        difference between var , let , const.    
+    </h3>
+    <pre>
+        var :-
+        -----
+        --var is global scope.
+        --It is function scoped.
+        --It will not throw an error if use it first and then declare it.
+        --you can modifie the value.
+
+        let :-
+        -----
+        --let is local scoped.
+        --It is block scoped.
+        --It will throw an error if u use it first and then declare it.
+        --you can modifie the value in it.
+
+        const :- 
+        -------- 
+        --It is also block scoped.
+        --It will throw an error if u use it first and then declare it.
+        --you can not modifies the value  assigned to it.
+    </pre>
+    <script>
+        console.log(a); // output will be undefined
+        var a;
+        a = 5;
+        console.log(a); // output :- 5
+        a = 6;
+        console.log(a); // output :- 6
+
+        console.log(b); // output will be error
+        let b = 5;
+        console.log(b); // output :- 5
+        b = 6;
+        console.log(b); // output :- 6
+
+        const c; // it will throw an error
+        const c = 5; 
+        console.log(c); //output :- 5
+        c = 6; // throws an error
+
+
+    </script>
+    
+    
+    
+</body>
+</html>
