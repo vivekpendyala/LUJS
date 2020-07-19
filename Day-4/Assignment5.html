@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sales = Number(prompt('Enter your sales'));
+        if(sales <= 5000)
+        {
+            console.log('your reward is:',(sales*2)/100)
+        }
+        else if(sales>=5001 && sales<= 10000)
+        {
+            console.log('your reward is:',(sales*5)/100)
+        }
+        else if(sales>=10001 && sales<= 20000)
+        {
+            console.log('your reward is:',(sales*7)/100)
+        }
+        else 
+        {
+            console.log('your reward is:',(sales*5)/100)
+        }
+    </script>
+</body>
+</html>

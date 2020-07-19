@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table,tr,td,th{
+            border-collapse: collapse;
+        }
+        #cool{
+            margin-left: 300px;
+            margin-right: 100px;
+            margin-top: 150px;
+            color: coral;
+           
+        }
+        button{
+            background-color: darksalmon;
+        }
+        body{
+            background-image: url(cal.jpg);
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script>
+        let a =[]
+        let b,s,i;
+        function fun(n)
+        {
+            a.push(n); 
+        }
+        function clearall()
+        {
+            b = [];
+            a = b;
+            document.getElementById('kk').innerHTML = 'Press = to get answer';
+        }
+        function answer()
+        {
+            s=0;
+            for(i=0;i<a.length;i++)
+            {
+                s += a[i];
+            }
+            console.log(a);
+            console.log(eval(s));
+            document.getElementById('kk').innerHTML = eval(s);
+        }
+    </script>
+</head>
+<body style="text-align: center;width:100%;" id="cool">
+    <table style="border: 1px black solid;">
+        <caption style="background-color: whitesmoke;">calculater</caption>
+        <tr>
+            <th colspan="4"><div id='kk'>press = to get answer.</div> </th>
+        </tr>
+        <tr>
+            <td><button value="1" name="a" onclick="fun(1)">1</button></td>
+            <td><button value="2" name="b" onclick="fun(2)">2</button></td>
+            <td><button value="3" name="c" onclick="fun(3)">3</button></td>
+            <td><button value="4" name="d" onclick="fun(4)">4</button></td>
+        </tr>  
+        <tr>
+            <td><button value="5" name="e" onclick="fun(5)">5</button></td>
+            <td><button value="6" name="f" onclick="fun(6)">6</button></td>
+            <td><button value="7" name="g" onclick="fun(7)">7</button></td>
+            <td><button value="8" name="h" onclick="fun(8)">8</button></td>
+        </tr> 
+        <tr>
+            <td><button value="9" name="i" onclick="fun(9)">9</button></td>
+            <td><button value="0" name="j" onclick="fun(0)">0</button></td>
+            <td><button value="." name="k" onclick="fun('.')">.</button></td>
+            <td><button value="=" name="l" onclick="answer()">=</button></td>
+        </tr> 
+        <tr>
+            <td><button value="+" name="m" onclick="fun('+')">+</button></td>
+            <td><button value="-" name="n" onclick="fun('-')">-</button></td>
+            <td><button value="*" name="o" onclick="fun('*')">x</button></td>
+            <td><button value="/" name="p" onclick="fun('/')">%</button></td>
+        </tr> 
+        <tr>
+            <td colspan="4"><button value='clear' name='q' onclick="clearall()">clear all</button></td>
+        </tr>      
+    </table>
+    <script>
+        
+    </script>
+</body>
+</html>
