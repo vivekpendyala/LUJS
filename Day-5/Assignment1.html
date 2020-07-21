@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt('Enter a number'))
+        let arr = []
+        for(let i=0;i<=a;i++)
+        {
+            arr.push(i);
+        }
+        let odd = arr.filter(e=>e%2!=0);
+        let oddCube = odd.map(el=>el**3);
+        console.log(`The array elements upto ${a} is ${arr}`);
+        console.log(`The odd numbers in the array are ${odd}`);
+        console.log(`The cube of odd numbers are ${oddCube}`);
+    </script>
+    
+</body>
+</html>

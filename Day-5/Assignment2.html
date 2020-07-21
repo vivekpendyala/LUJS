@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User{
+            constructor(name,age,email)
+            {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.coin = 0;
+                this.courses = [];
+            };
+            login(){
+                console.log(`${this.name} has logged in.`);
+            }
+            logout(){
+                console.log(`${this.name} has logged out...`)
+            }
+
+        }
+        class Moderator extends User{
+            addCoins(U,coins){
+                U.coin += coins;
+                return this
+            }
+
+            removeCoins(U,coins){
+                U.coin -=coins;
+                return this
+            }
+        }
+
+        class Admin extends Moderator{
+            addCourse(U,course){
+                U.courses.push(course);
+            }
+            removeCourse(U,course)
+            {
+                let uc = U.courses;
+                uc = uc.filter((e=>e!=course));
+                U.courses = uc;
+            }
+        }
+
+        let user2 = new User('ABCD',25,'abcd@gmail.com');        
+        let user1 = new User('ABC',24,'abc@gmail.com');
+        let vk = new Moderator('vk',26,'vk@gmail.com');
+        let vivek = new Admin('vivek',27,'vivek@gmail.com');
+        console.log(user1);
+        console.log(user2);
+        console.log(vk);
+        console.log(vivek);
+        vk.addCoins(user1,50);
+        console.log(user1);
+        vk.removeCoins(user1,20);
+        console.log(user1);
+        vivek.addCourse(user1,'Python');
+        vivek.addCourse(user1,'Javascript');
+        vivek.addCourse(user1,'Java');
+        console.log(user1);
+        vivek.removeCourse(user1,'Java');
+        console.log(user1)
+    </script>
+    
+</body>
+</html>
