@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let arr = ['red','green','yellow','blue','orange'];
+        let j =1;
+        for(let i=0;i<arr.length;i++)
+        {
+            task(i);
+        }
+        function task(i){
+        setTimeout(function(){
+            document.body.style.backgroundColor=arr[i];
+        },5000*i);}
+    </script>
+</head>
+<body id='unexpected'>
+    <h1 id ='un' style="color: blue;"> WELCOME TO MY WEBPAGE.</h1>
+    <p>The background color will be changed in every 5 sec.</p>
+    
+</body>
+</html>

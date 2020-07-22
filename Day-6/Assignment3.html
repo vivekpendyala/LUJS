@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>My web page</title>
+        <script>
+            let name = prompt("Enter your name",'anonymous');
+        </script>
+        <style>
+            body{
+                background-color: white;
+            }
+            .mystyle{
+                background-color: black;
+                color:white;
+            }
+        </style>
+    </head>
+    <body class='dark'>
+        <div id='text'></div>
+        <h2 id='n'>Welcome to the web page</h2>
+        <input type="button" value="DarkMode" onclick="fun()" id='mode'>
+
+        <br>
+        Time:
+        <p id='time'></p>
+    </div>
+        <script>
+             document.getElementById('n').innerHTML+=` ${name}.`
+             let x = document.body;
+             console.log(x);
+             function time(){
+                let date = new Date();
+                document.getElementById('time').innerHTML = date;
+             }
+             setInterval(time,1000);
+
+
+             
+             function fun(){
+                 document.body.classList.toggle('mystyle');
+             }
+        </script>
+
+    </body>
+</html>

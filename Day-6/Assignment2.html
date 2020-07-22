@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>
+        Enter a number<input type="number" id="Num" value=''>
+    </label>
+    <input type="button" value="Submit" onclick="fun()">
+    <p id='table'></p>
+    <script>
+        function fun(){
+        let n = document.getElementById('Num').value;
+        console.log(n);
+        for(let i =1;i<11;i++)
+        {
+            let ans = i*n;
+            document.getElementById('table').innerHTML +=`${n}x${i}=${ans}<br>`
+        }
+        }
+    </script>
+</body>
+</html>
