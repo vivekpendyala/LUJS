@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0vw;
+            margin: 0vw;
+        }
+        #con{
+            top: 13vw;
+            height: 5vw;
+            width: 22vw;
+            left: 40vw;
+            background-color: rgb(247, 221, 203);
+            position: absolute;
+            box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+            z-index: -2;
+            display: none;
+        }
+        #container{
+            top: 18vw;
+            height: 15vw;
+            width: 22vw;
+            left: 40vw;
+            box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+            display: block;
+            position: absolute;
+            z-index: 1;
+            display: none;
+        }
+        #viv{
+            display: none;
+        }
+        input[type=text],input[type=password]{
+            border: none;
+            box-sizing: border-box;
+            width: 15vw;
+            padding: 0.3vw;
+            margin: 1vw;
+            font-size: medium;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            border-bottom-style: solid;
+            border-bottom-color: black;
+            text-align: center;
+        }
+        input[type=text]:focus,input[type=password]:focus{
+            background-color: snow;
+            border-bottom: red;
+            width:80%;
+        }
+    </style>
+</head>
+<body>
+    <div class='t'>
+        <input type='submit' name='open' value='Button' onclick='t1()'/>
+    </div>
+    <div id='con'>
+        <h2 style="text-align: center;padding-top: 1vw;">
+            Locker
+        </h2>
+    </div>
+    <div id="container">
+        <form>
+            <table>
+                <tr>
+                    <td><label for='Password'>Password:</label></td>
+                    <td>
+                        <input type='password' placeholder="Password" id='pd' value=''/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div >
+            <input type="submit" name='submit' onclick="fun()" style="float: center;">
+        </div>
+        </div>
+        <div id='viv'>
+            This section contains the information of Case....
+        </div>
+    <script>
+        var x = document.getElementById("container");
+        var y = document.getElementById('con');
+        var v = document.getElementById('viv');
+        function fun()
+        {
+            var a = document.getElementById('pd').value;
+            document.getElementById('pd').value='';
+            if (a === 'vivek'){
+                v.style.display = "block";
+                x.style.display = 'none';
+                y.style.display = 'none';
+            }
+            else{
+                v.style.display = 'none';
+            }
+        }
+        function t1(){
+           
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                }      
+            else {
+                 x.style.display = "none";
+                }
+            if (y.style.display === "none") {
+                y.style.display = "block";
+                }      
+            else {
+                 y.style.display = "none";
+                }
+            if(v.style.display = "block")
+            {
+                v.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
